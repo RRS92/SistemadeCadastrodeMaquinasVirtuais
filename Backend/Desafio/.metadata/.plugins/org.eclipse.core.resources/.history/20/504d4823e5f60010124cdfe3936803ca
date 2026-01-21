@@ -1,0 +1,87 @@
+package com.desafio.claro.rebson.service;
+
+import com.desafio.claro.rebson.controller.DTO.VirtualMachineDTO;
+import com.desafio.claro.rebson.model.VirtualMachine;
+import com.desafio.claro.rebson.model.VmStatus;
+import com.desafio.claro.rebson.repository.VirtualMachineRepository;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class VirtualMachineService {
+
+    @Autowired
+    private VirtualMachineRepository repository;
+
+    /* Criar máquina virtual */
+    public VirtualMachine create(VirtualMachineDTO dto) {
+
+        VirtualMachine vm = new VirtualMachine();
+        vm.setName(dto.name());
+        vm.setCpu(dto.cpu());
+        vm.setMemoryMb(dto.memoryMb());
+        vm.setDiskGb(dto.diskGb());
+        vm.setStatus(VmStatus.OFF); // regra de negócio
+
+        return repository.save(vm);
+    }
+
+    /* Listar todas as máquinas virtuais */
+    public List<VirtualMachine> findAll() {
+        return repository.findAll();
+    }
+
+    /* Buscar máquina virtual por ID */
+    public VirtualMachine findById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Máquina virtual não encontrada"));
+    }
+
+    /* Atualizar máquina virtual */
+    public VirtualMachine update(Long id, VirtualMachineDTO dto) {
+
+        VirtualMachine vm = findById(id);
+
+        vm.setName(dto.name());
+        vm.setCpu(dto.cpu());
+        vm.setMemoryMb(dto.memoryMb());
+        vm.setDiskGb(dto.diskGb());
+
+        return repository.save(vm);
+    }
+
+    /* Deletar máquina virtual */
+    public void delete(Long id) {
+        VirtualMachine vm = findById(id);
+        repository.delete(vm);
+    }
+
+    /* Ligar máquina virtual */
+    public VirtualMachine start(Long id) {
+
+        VirtualMachine vm = findById(id);
+
+        if (vm.getStatus() == VmStatus.ON) {
+            throw new IllegalStateException("A máquina virtual já está ligada");
+        }
+
+        vm.setStatus(VmStatus.ON);
+        return repository.save(vm);
+    }
+
+    /* Desligar máquina virtual */
+    public VirtualMachine stop(Long id) {
+
+        VirtualMachine vm = findById(id);
+
+        if (vm.getStatus() == VmStatus.OFF) {
+            throw new IllegalStateException("A máquina virtual já está desligada");
+        }
+
+        vm.setStatus(VmStatus.OFF);
+        return repository.save(vm);
+    }
+}

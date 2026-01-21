@@ -1,0 +1,5 @@
+package com.desafio.claro.rebson.model;
+
+public class Vm {
+
+}

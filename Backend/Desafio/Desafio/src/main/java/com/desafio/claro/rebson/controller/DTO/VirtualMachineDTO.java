@@ -1,0 +1,41 @@
+package com.desafio.claro.rebson.controller.DTO;
+
+import com.desafio.claro.rebson.model.VirtualMachine;
+import com.desafio.claro.rebson.model.VmStatus;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record VirtualMachineDTO(
+
+        Long id,
+
+        @NotBlank(message = "O nome da máquina é obrigatório")
+        String name,
+
+        @NotNull
+        @Min(value = 1, message = "CPU deve ser maior que zero")
+        Integer cpu,
+
+        @NotNull
+        @Min(value = 1, message = "Memória deve ser maior que zero")
+        Integer memoryMb,
+
+        @NotNull
+        @Min(value = 1, message = "Disco deve ser maior que zero")
+        Integer diskGb,
+
+        VmStatus status
+) {
+
+    public VirtualMachineDTO(VirtualMachine vm) {
+        this(
+            vm.getId(),
+            vm.getName(),
+            vm.getCpu(),
+            vm.getMemoryMb(),
+            vm.getDiskGb(),
+            vm.getStatus()
+        );
+    }
+}

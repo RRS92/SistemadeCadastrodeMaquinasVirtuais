@@ -1,0 +1,7 @@
+package com.desafio.claro.rebson.controller;
+
+@RestController
+public class VmController {
+
+
+}

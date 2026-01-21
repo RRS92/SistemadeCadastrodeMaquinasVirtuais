@@ -1,0 +1,30 @@
+package com.desafio.claro.rebson.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.Getter;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "vm")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Vm {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String name;
+	private int cpu;
+	private int memoria;
+	private int disco;
+	private int data_criacao;
+	
+
+}

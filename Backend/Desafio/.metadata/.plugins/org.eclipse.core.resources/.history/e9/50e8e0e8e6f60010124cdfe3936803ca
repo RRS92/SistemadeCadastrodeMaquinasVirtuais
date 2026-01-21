@@ -1,0 +1,89 @@
+package com.desafio.claro.rebson.controller;
+
+import com.desafio.claro.rebson.controller.DTO.VirtualMachineDTO;
+import com.desafio.claro.rebson.model.VirtualMachine;
+import com.desafio.claro.rebson.service.VirtualMachineService;
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/vms")
+@CrossOrigin(origins = "*")
+public class VirtualMachineController {
+
+    @Autowired
+    private VirtualMachineService virtualMachineService;
+
+    /* Criar máquina virtual */
+    @PostMapping
+    @Transactional
+    public ResponseEntity<VirtualMachineDTO> create(
+            @RequestBody @Valid VirtualMachineDTO dto) {
+
+        VirtualMachine vm = virtualMachineService.create(dto);
+        return ResponseEntity.ok(new VirtualMachineDTO(vm));
+    }
+
+    /* Listar todas as máquinas virtuais */
+    @GetMapping
+    public ResponseEntity<List<VirtualMachineDTO>> findAll() {
+
+        List<VirtualMachineDTO> vms = virtualMachineService.findAll()
+                .stream()
+                .map(VirtualMachineDTO::new)
+                .toList();
+
+        return ResponseEntity.ok(vms);
+    }
+
+    /* Buscar máquina virtual por ID */
+    @GetMapping("/{id}")
+    public ResponseEntity<VirtualMachineDTO> findById(@PathVariable Long id) {
+
+        VirtualMachine vm = virtualMachineService.findById(id);
+        return ResponseEntity.ok(new VirtualMachineDTO(vm));
+    }
+
+    /* Atualizar máquina virtual */
+    @PutMapping("/{id}")
+    @Transactional
+    public ResponseEntity<VirtualMachineDTO> update(
+            @PathVariable Long id,
+            @RequestBody @Valid VirtualMachineDTO dto) {
+
+        VirtualMachine vm = virtualMachineService.update(id, dto);
+        return ResponseEntity.ok(new VirtualMachineDTO(vm));
+    }
+
+    /* Deletar máquina virtual */
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+
+        virtualMachineService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    /* Ligar máquina virtual */
+    @PatchMapping("/{id}/start")
+    @Transactional
+    public ResponseEntity<VirtualMachineDTO> start(@PathVariable Long id) {
+
+        VirtualMachine vm = virtualMachineService.start(id);
+        return ResponseEntity.ok(new VirtualMachineDTO(vm));
+    }
+
+    /* Desligar máquina virtual */
+    @PatchMapping("/{id}/stop")
+    @Transactional
+    public ResponseEntity<VirtualMachineDTO> stop(@PathVariable Long id) {
+
+        VirtualMachine vm = virtualMachineService.stop(id);
+        return ResponseEntity.ok(new VirtualMachineDTO(vm));
+    }
+}

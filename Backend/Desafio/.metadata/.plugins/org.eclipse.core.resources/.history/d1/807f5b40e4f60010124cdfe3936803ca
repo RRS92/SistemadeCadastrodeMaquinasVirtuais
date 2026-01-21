@@ -1,0 +1,5 @@
+package com.desafio.claro.rebson.controller.DTO;
+
+public record VmDTO() {
+
+}
