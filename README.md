@@ -1,1 +1,1 @@
-# Sistema d eCadastro de Maquinas Virtuais
+# Sistema de Cadastro de Máquinas Virtuais
