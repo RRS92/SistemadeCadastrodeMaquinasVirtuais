@@ -1,0 +1,20 @@
+<h2>Editar Máquina Virtual</h2>
+
+<form [formGroup]="vmForm" (ngSubmit)="submit()">
+
+  <label>Nome</label>
+  <input type="text" formControlName="name">
+
+  <label>CPU</label>
+  <input type="number" formControlName="cpu">
+
+  <label>Memória (MB)</label>
+  <input type="number" formControlName="memoryMb">
+
+  <label>Disco (GB)</label>
+  <input type="number" formControlName="diskGb">
+
+  <button type="submit" [disabled]="vmForm.invalid">
+    Salvar
+  </button>
+</form>
