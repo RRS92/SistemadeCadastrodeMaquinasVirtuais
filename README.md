@@ -1,6 +1,6 @@
 # Sistema de Cadastro de Máquinas Virtuais
 
-##Visão Geral
+## Visão Geral
 
 Este projeto consiste em um sistema de cadastro e gerenciamento de máquinas virtuais, desenvolvido como parte de um desafio técnico para a vaga de Desenvolvedor Full Stack.
 
@@ -16,7 +16,7 @@ Toda a aplicação foi construída seguindo boas práticas de desenvolvimento, s
 
 ---
 
-##Arquitetura Geral
+## Arquitetura Geral
 
 - **Backend**: API REST responsável pelas regras de negócio, persistência de dados e controle do ciclo de vida das VMs.
 - **Frontend**: Aplicação web em Angular que consome a API e fornece a interface de usuário.
