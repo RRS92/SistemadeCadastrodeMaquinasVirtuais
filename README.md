@@ -104,11 +104,11 @@ mvn spring-boot:run
 ```
 5. A aplicação estará disponível em:
 ```bash
-[mvn spring-boot:run](http://localhost:8080)
+http://localhost:8080
 ```
 6. Swagger UI:
 ```bash
-[mvn spring-boot:run](http://localhost:8080/swagger-ui.html)
+http://localhost:8080/swagger-ui.html
 ```
 
 ---
