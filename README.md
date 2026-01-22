@@ -113,6 +113,61 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
+## Frontend
 
+**Tecnologias Utilizadas:**
 
+- Angular
+- TypeScript
+- HTML
+- CSS puro (sem frameworks externos)
+- Angular Router
+- Angular Forms / Reactive Forms
+- HttpClient
+
+**Funcionalidades Implementadas:**
+
+- Listagem de máquinas virtuais
+- Cadastro de nova VM
+- Edição de VM existente
+- Exclusão de VM
+- Integração completa com a API REST
+
+O frontend consome diretamente os endpoints do backend e reflete o estado real das máquinas virtuais armazenadas no banco de dados.
+
+## Como Rodar o Frontend
+
+**Pré-requisitos:**
+
+- Node.js (versão LTS recomendada)
+- NPM
+- Angular CLI
+
+Passo a Passo
+
+1. Clone o repositório do frontend
+
+2. Instale as dependências:
+```bash
+npm isntall
+```
+3. Inicie o servidor de desenvolvimento:
+```bash
+npx ng serve
+```
+
+4. A aplicação estará disponível em:
+```bash
+http://localhost:4200
+```
+
+O frontend está configurado para consumir o backend rodando em **http://localhost:8080.**
+
+---
+
+## Observações Finais
+
+- O projeto foi desenvolvido com foco em clareza, organização e boas práticas.
+- A separação entre frontend e backend permite fácil evolução e manutenção.
+- O uso de Swagger facilita testes e validação da API.
 
