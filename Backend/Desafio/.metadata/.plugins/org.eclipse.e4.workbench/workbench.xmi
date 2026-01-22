@@ -79,7 +79,7 @@
           <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
           <tags>persp.editorOnboardingCommand:Open Type$$$Ctrl+Shift+T</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzYfbXEfCsne1JRYNYAg" selectedElement="_wnAzbfbXEfCsne1JRYNYAg" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzYvbXEfCsne1JRYNYAg" containerData="2500" selectedElement="_wnAzY_bXEfCsne1JRYNYAg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzYvbXEfCsne1JRYNYAg" containerData="1859" selectedElement="_wnAzY_bXEfCsne1JRYNYAg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzY_bXEfCsne1JRYNYAg" containerData="6000" selectedElement="_wnAzafbXEfCsne1JRYNYAg">
                 <children xsi:type="basic:PartStack" xmi:id="_wnAzZPbXEfCsne1JRYNYAg" elementId="left" containerData="6600" selectedElement="_wnAzZfbXEfCsne1JRYNYAg">
                   <tags>org.eclipse.e4.primaryNavigationStack</tags>
@@ -114,8 +114,8 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzbfbXEfCsne1JRYNYAg" containerData="7500" selectedElement="_wnAzbvbXEfCsne1JRYNYAg">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzbvbXEfCsne1JRYNYAg" containerData="5380" selectedElement="_wnAzb_bXEfCsne1JRYNYAg" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzbfbXEfCsne1JRYNYAg" containerData="8141" selectedElement="_wnAzbvbXEfCsne1JRYNYAg">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_wnAzbvbXEfCsne1JRYNYAg" containerData="7337" selectedElement="_wnAzb_bXEfCsne1JRYNYAg" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_wnAzb_bXEfCsne1JRYNYAg" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_wmw7wPbXEfCsne1JRYNYAg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_wnAzcPbXEfCsne1JRYNYAg" elementId="right" containerData="2500" selectedElement="_wnAzcfbXEfCsne1JRYNYAg">
                   <tags>org.eclipse.e4.secondaryNavigationStack</tags>
@@ -141,7 +141,7 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_wnAzdvbXEfCsne1JRYNYAg" elementId="bottom" containerData="4620" selectedElement="_wnAze_bXEfCsne1JRYNYAg">
+              <children xsi:type="basic:PartStack" xmi:id="_wnAzdvbXEfCsne1JRYNYAg" elementId="bottom" containerData="2663" selectedElement="_wnAze_bXEfCsne1JRYNYAg">
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_wnAzd_bXEfCsne1JRYNYAg" elementId="org.eclipse.ui.views.ProblemView" ref="_wm3CYvbXEfCsne1JRYNYAg" closeable="true">
                   <tags>View</tags>
@@ -214,20 +214,18 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_wmw7wPbXEfCsne1JRYNYAg" elementId="org.eclipse.ui.editorss" selectedElement="_wmw7wfbXEfCsne1JRYNYAg">
-      <children xsi:type="basic:PartStack" xmi:id="_wmw7wfbXEfCsne1JRYNYAg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_2ULVEPbYEfC6dbz8L-sEyg">
+      <children xsi:type="basic:PartStack" xmi:id="_wmw7wfbXEfCsne1JRYNYAg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_Znr6cPbjEfC7XabqpVaOVg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_2ULVEPbYEfC6dbz8L-sEyg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="VirtualMachineController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachineController.java&quot; partName=&quot;VirtualMachineController.java&quot; title=&quot;VirtualMachineController.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/controller/VirtualMachineController.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/controller/VirtualMachineController.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;978&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_aYOjYPbfEfC7XabqpVaOVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="VirtualMachine.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachine.java&quot; partName=&quot;VirtualMachine.java&quot; title=&quot;VirtualMachine.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/model/VirtualMachine.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/model/VirtualMachine.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;15&quot; selectionOffset=&quot;215&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_aYOjYPbfEfC7XabqpVaOVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="VirtualMachine.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachine.java&quot; partName=&quot;VirtualMachine.java&quot; title=&quot;VirtualMachine.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/model/VirtualMachine.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/model/VirtualMachine.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;15&quot; selectionOffset=&quot;215&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_2ULVEPbYEfC6dbz8L-sEyg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="VirtualMachineController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachineController.java&quot; partName=&quot;VirtualMachineController.java&quot; title=&quot;VirtualMachineController.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/controller/VirtualMachineController.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/controller/VirtualMachineController.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3541&quot; selectionTopPixel=&quot;986&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -239,10 +237,12 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_Znr6cPbjEfC7XabqpVaOVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="VirtualMachineDTO.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachineDTO.java&quot; partName=&quot;VirtualMachineDTO.java&quot; title=&quot;VirtualMachineDTO.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/controller/DTO/VirtualMachineDTO.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/controller/DTO/VirtualMachineDTO.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;811&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachineDTO.java&quot; partName=&quot;VirtualMachineDTO.java&quot; title=&quot;VirtualMachineDTO.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/controller/DTO/VirtualMachineDTO.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/controller/DTO/VirtualMachineDTO.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;349&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_iNNl0PbjEfC7XabqpVaOVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="VirtualMachineService.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;VirtualMachineService.java&quot; partName=&quot;VirtualMachineService.java&quot; title=&quot;VirtualMachineService.java&quot; tooltip=&quot;Desafio/src/main/java/com/desafio/claro/rebson/service/VirtualMachineService.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Desafio/src/main/java/com/desafio/claro/rebson/service/VirtualMachineService.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1960&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
@@ -427,7 +427,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_whqZUvbXEfCsne1JRYNYAg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ROVaUPcZEfCRSMFYn04wGw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wWj9C_bXEfCsne1JRYNYAg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_O867oPe5EfChF9MfpDlrXg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wWj9C_bXEfCsne1JRYNYAg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_whqZU_bXEfCsne1JRYNYAg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -435,8 +435,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_whqZVfbXEfCsne1JRYNYAg" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ROXPgPcZEfCRSMFYn04wGw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_wWiuifbXEfCsne1JRYNYAg"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ROXPgfcZEfCRSMFYn04wGw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_wWiu_vbXEfCsne1JRYNYAg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_O89X4Pe5EfChF9MfpDlrXg" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_wWiuifbXEfCsne1JRYNYAg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_O89X4fe5EfChF9MfpDlrXg" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_wWiu_vbXEfCsne1JRYNYAg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_whqZVvbXEfCsne1JRYNYAg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -460,7 +460,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_whqZWvbXEfCsne1JRYNYAg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ROX2kPcZEfCRSMFYn04wGw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wWj8xfbXEfCsne1JRYNYAg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_O89-8fe5EfChF9MfpDlrXg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wWj8xfbXEfCsne1JRYNYAg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_whqZW_bXEfCsne1JRYNYAg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2496,7 +2496,7 @@
   <addons xmi:id="_wWGClvbXEfCsne1JRYNYAg" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_wWGCl_bXEfCsne1JRYNYAg" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_wWNXQPbXEfCsne1JRYNYAg" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_RD_ykPcZEfCRSMFYn04wGw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_Owj6oPe5EfChF9MfpDlrXg" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_wWfEEPbXEfCsne1JRYNYAg" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_wWfEEfbXEfCsne1JRYNYAg" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

@@ -8,9 +8,13 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 import java.util.List;
 
+@Tag(name = "Virtual Machines", description = "Gerenciamento de máquinas virtuais")
 @RestController
 @RequestMapping("/vms")
 @CrossOrigin(origins = "*")
@@ -19,6 +23,8 @@ public class VirtualMachineController {
     @Autowired
     private VirtualMachineService virtualMachineService;
 
+    @Operation(summary = "Criar uma nova máquina virtual",
+            description = "Cria uma VM com status inicial OFF")
     @PostMapping
     @Transactional
     public ResponseEntity<VirtualMachineDTO> create(
@@ -28,6 +34,9 @@ public class VirtualMachineController {
         return ResponseEntity.ok(new VirtualMachineDTO(vm));
     }
 
+    @Operation(
+    	    summary = "Listar máquinas virtuais",
+    	    description = "Retorna a lista de todas as máquinas virtuais cadastradas")
     @GetMapping
     public ResponseEntity<List<VirtualMachineDTO>> findAll() {
 
@@ -39,6 +48,9 @@ public class VirtualMachineController {
         return ResponseEntity.ok(vms);
     }
 
+    @Operation(
+    	    summary = "Buscar máquina virtual por ID",
+    	    description = "Retorna os dados de uma máquina virtual a partir do seu ID")
     @GetMapping("/{id}")
     public ResponseEntity<VirtualMachineDTO> findById(@PathVariable Long id) {
 
@@ -46,6 +58,10 @@ public class VirtualMachineController {
         return ResponseEntity.ok(new VirtualMachineDTO(vm));
     }
 
+    @Operation(
+    	    summary = "Atualizar máquina virtual",
+    	    description = "Atualiza os dados de uma máquina virtual existente"
+    	)
     @PutMapping("/{id}")
     @Transactional
     public ResponseEntity<VirtualMachineDTO> update(
@@ -56,6 +72,10 @@ public class VirtualMachineController {
         return ResponseEntity.ok(new VirtualMachineDTO(vm));
     }
 
+    @Operation(
+    	    summary = "Remover máquina virtual",
+    	    description = "Remove uma máquina virtual a partir do seu ID"
+    	)
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity<Void> delete(@PathVariable Long id) {
@@ -64,6 +84,10 @@ public class VirtualMachineController {
         return ResponseEntity.noContent().build();
     }
 
+    @Operation(
+    	    summary = "Ligar máquina virtual",
+    	    description = "Altera o status da máquina virtual para ON"
+    	)
     @PatchMapping("/{id}/start")
     @Transactional
     public ResponseEntity<VirtualMachineDTO> start(@PathVariable Long id) {
@@ -72,6 +96,10 @@ public class VirtualMachineController {
         return ResponseEntity.ok(new VirtualMachineDTO(vm));
     }
 
+    @Operation(
+    	    summary = "Desligar máquina virtual",
+    	    description = "Altera o status da máquina virtual para OFF"
+    	)
     @PatchMapping("/{id}/stop")
     @Transactional
     public ResponseEntity<VirtualMachineDTO> stop(@PathVariable Long id) {
