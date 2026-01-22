@@ -71,6 +71,48 @@ Todos os endpoints foram testados via **Insomnia** e estão documentados via **S
 
 ---
 
+## Como Rodar o Backend
+
+**Pré-requisitos:**
+
+- Java 17 ou superior
+- Maven
+- PostgreSQL
+
+**Passo a Passo:*
+
+1. Clone o repositório do backend
+
+2. Crie um banco de dados PostgreSQL (exemplo: desafio_vm)
+
+3. Configure o arquivo application.properties:
+
+ ```bash
+spring.datasource.url=jdbc:postgresql://localhost:5432/desafio_vm
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
+
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+```
+
+ 4. Execute o projeto:
+```bash
+mvn spring-boot:run
+```
+5. A aplicação estará disponível em:
+```bash
+[mvn spring-boot:run](http://localhost:8080)
+```
+6. Swagger UI:
+```bash
+[mvn spring-boot:run](http://localhost:8080/swagger-ui.html)
+```
+
+---
+
 
 
 
