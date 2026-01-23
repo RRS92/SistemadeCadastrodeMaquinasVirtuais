@@ -136,12 +136,17 @@ http://localhost:8080/swagger-ui.html
 
 O frontend consome diretamente os endpoints do backend e reflete o estado real das máquinas virtuais armazenadas no banco de dados.
 
-Telas do Frontend:
-<img width="1916" height="912" alt="01" src="https://github.com/user-attachments/assets/62a7aa97-0f8c-44fc-bfa0-84e145b0f2db" />
-<img width="1917" height="910" alt="02" src="https://github.com/user-attachments/assets/220c4435-26e0-4e7c-9cf8-0b9704567a4a" />
-<img width="1918" height="907" alt="03" src="https://github.com/user-attachments/assets/26f4d390-f5a3-44df-9160-d4575322012d" />
-
-
+## Telas do Frontend:
+**Tela de listagem:**
+<img width="1916" height="912" alt="01" src="https://github.com/user-attachments/assets/de14c927-12ed-41fe-84d9-c2eead104a99" />
+**Tela de criação:**
+<img width="1915" height="909" alt="02" src="https://github.com/user-attachments/assets/c3bed9be-6e34-44b2-b4d0-93714573fba9" />
+**Tela de listagem com a nova máquina criada:**
+<img width="1918" height="907" alt="03" src="https://github.com/user-attachments/assets/3fc1dab9-fa67-4ef6-a879-f3d8452bd6bd" />
+**Tela de edição:**
+<img width="1916" height="907" alt="04" src="https://github.com/user-attachments/assets/57c69891-4f64-4b90-b97d-e904ad15dd89" />
+**Tela de listagem com os status das máquinas alterados e máquinas excluidas:**
+<img width="1918" height="906" alt="05" src="https://github.com/user-attachments/assets/69cbc9e5-3e9b-4918-a43f-273803826b7f" />
 
 ## Como Rodar o Frontend
 
