@@ -136,6 +136,13 @@ http://localhost:8080/swagger-ui.html
 
 O frontend consome diretamente os endpoints do backend e reflete o estado real das máquinas virtuais armazenadas no banco de dados.
 
+Telas do Frontend:
+<img width="1916" height="912" alt="01" src="https://github.com/user-attachments/assets/62a7aa97-0f8c-44fc-bfa0-84e145b0f2db" />
+<img width="1917" height="910" alt="02" src="https://github.com/user-attachments/assets/220c4435-26e0-4e7c-9cf8-0b9704567a4a" />
+<img width="1918" height="907" alt="03" src="https://github.com/user-attachments/assets/26f4d390-f5a3-44df-9160-d4575322012d" />
+
+
+
 ## Como Rodar o Frontend
 
 **Pré-requisitos:**
