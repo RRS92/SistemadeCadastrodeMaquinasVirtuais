@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
 import { VirtualMachineService } from '../../services/virtual-machine.service';
 import { VirtualMachine } from '../../models/virtual-machine.model';
-import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-vm-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './vm-list.component.html'
 })
 export class VmListComponent implements OnInit {
@@ -25,14 +25,9 @@ export class VmListComponent implements OnInit {
 
   loadVms(): void {
     this.vmService.findAll().subscribe({
-  next: (data: VirtualMachine[]) => {
-    this.vms = data;
-  },
-  error: (err: Error) => {
-    console.error('Erro ao carregar VMs', err);
-  }
-});
-
+      next: (data: VirtualMachine[]) => this.vms = data,
+      error: (err: Error) => console.error('Erro ao carregar VMs', err)
+    });
   }
 
   editVm(id: number): void {
@@ -44,6 +39,26 @@ export class VmListComponent implements OnInit {
       this.vmService.delete(id).subscribe({
         next: () => this.loadVms(),
         error: err => console.error('Erro ao excluir VM', err)
+      });
+    }
+  }
+
+  /** Normaliza e verifica se a VM está ligada */
+  isVmOn(vm: VirtualMachine): boolean {
+    return vm.status?.toString().toUpperCase() === 'ON';
+  }
+
+  /** Alterna o status da VM */
+  toggleStatus(vm: VirtualMachine): void {
+    if (this.isVmOn(vm)) {
+      this.vmService.stop(vm.id!).subscribe({
+        next: () => this.loadVms(),
+        error: err => console.error('Erro ao desligar VM', err)
+      });
+    } else {
+      this.vmService.start(vm.id!).subscribe({
+        next: () => this.loadVms(),
+        error: err => console.error('Erro ao ligar VM', err)
       });
     }
   }

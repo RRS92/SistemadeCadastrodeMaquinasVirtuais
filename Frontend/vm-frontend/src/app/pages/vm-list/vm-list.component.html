@@ -1,6 +1,8 @@
 <h2>Máquinas Virtuais</h2>
 
-<a routerLink="/vms/create">Nova Máquina Virtual</a>
+<button routerLink="/vms/create">
+  Criar Nova Máquina Virtual
+</button>
 
 <table border="1" cellpadding="8" cellspacing="0">
   <thead>
@@ -9,6 +11,7 @@
       <th>CPU</th>
       <th>Memória (MB)</th>
       <th>Disco (GB)</th>
+      <th>Status</th>
       <th>Ações</th>
     </tr>
   </thead>
@@ -19,7 +22,11 @@
       <td>{{ vm.cpu }}</td>
       <td>{{ vm.memoryMb }}</td>
       <td>{{ vm.diskGb }}</td>
+      <td>{{ vm.status }}</td>
       <td>
+        <button (click)="toggleStatus(vm)">
+          {{ isVmOn(vm) ? 'Desligar VM' : 'Ligar VM' }}
+        </button>
         <button (click)="editVm(vm.id!)">Editar</button>
         <button (click)="deleteVm(vm.id!)">Excluir</button>
       </td>
