@@ -1,0 +1,58 @@
+package com.desafio.claro.rebson.controller;
+
+import com.desafio.claro.rebson.service.VirtualMachineService;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+class VirtualMachineControllerTest {
+
+    private MockMvc mockMvc;
+
+    @Mock
+    private VirtualMachineService virtualMachineService;
+
+    @InjectMocks
+    private VirtualMachineController controller;
+
+    @BeforeEach
+    void setup() {
+        MockitoAnnotations.openMocks(this);
+        mockMvc = MockMvcBuilders
+                .standaloneSetup(controller)
+                .build();
+    }
+
+    @Test
+    void deveCriarMaquinaVirtual() throws Exception {
+
+        String json = """
+                {
+                  "name": "VM Test",
+                  "cpu": 2,
+                  "memoryMb": 2048,
+                  "diskGb": 50
+                }
+                """;
+
+        mockMvc.perform(post("/vms")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void deveListarMaquinasVirtuais() throws Exception {
+
+        mockMvc.perform(get("/vms"))
+                .andExpect(status().isOk());
+    }
+}

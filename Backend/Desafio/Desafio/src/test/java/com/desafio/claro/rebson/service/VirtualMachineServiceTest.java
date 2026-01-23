@@ -1,0 +1,128 @@
+package com.desafio.claro.rebson.service;
+
+import com.desafio.claro.rebson.controller.DTO.VirtualMachineDTO;
+import com.desafio.claro.rebson.model.VirtualMachine;
+import com.desafio.claro.rebson.model.VmStatus;
+import com.desafio.claro.rebson.repository.VirtualMachineRepository;
+import jakarta.persistence.EntityNotFoundException;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+@ExtendWith(MockitoExtension.class)
+class VirtualMachineServiceTest {
+
+    @Mock
+    private VirtualMachineRepository repository;
+
+    @InjectMocks
+    private VirtualMachineService service;
+
+    @Test
+    void deveCriarMaquinaVirtualComStatusOff() {
+
+        VirtualMachineDTO dto = mock(VirtualMachineDTO.class);
+
+        when(dto.name()).thenReturn("VM Teste");
+        when(dto.cpu()).thenReturn(2);
+        when(dto.memoryMb()).thenReturn(2048);
+        when(dto.diskGb()).thenReturn(50);
+
+        when(repository.save(any(VirtualMachine.class)))
+                .thenAnswer(invocation -> invocation.getArgument(0));
+
+        VirtualMachine vm = service.create(dto);
+
+        assertEquals(VmStatus.Off, vm.getStatus());
+        verify(repository).save(any(VirtualMachine.class));
+    }
+
+    @Test
+    void deveBuscarVmPorId() {
+        VirtualMachine vm = new VirtualMachine();
+        vm.setId(1L);
+
+        when(repository.findById(1L)).thenReturn(Optional.of(vm));
+
+        VirtualMachine resultado = service.findById(1L);
+
+        assertNotNull(resultado);
+        assertEquals(1L, resultado.getId());
+    }
+
+    @Test
+    void deveLancarExcecaoQuandoVmNaoExiste() {
+        when(repository.findById(99L)).thenReturn(Optional.empty());
+
+        assertThrows(EntityNotFoundException.class,
+                () -> service.findById(99L));
+    }
+
+    @Test
+    void deveLigarMaquinaVirtual() {
+        VirtualMachine vm = new VirtualMachine();
+        vm.setStatus(VmStatus.Off);
+
+        when(repository.findById(1L)).thenReturn(Optional.of(vm));
+        when(repository.save(vm)).thenReturn(vm);
+
+        VirtualMachine resultado = service.start(1L);
+
+        assertEquals(VmStatus.On, resultado.getStatus());
+    }
+
+    @Test
+    void deveListarTodasAsMaquinasVirtuais() {
+
+        VirtualMachine vm1 = new VirtualMachine();
+        VirtualMachine vm2 = new VirtualMachine();
+
+        when(repository.findAll()).thenReturn(List.of(vm1, vm2));
+
+        List<VirtualMachine> resultado = service.findAll();
+
+        assertNotNull(resultado);
+        assertEquals(2, resultado.size());
+        verify(repository).findAll();
+    }
+
+    @Test
+    void deveDesligarMaquinaVirtual() {
+
+        VirtualMachine vm = new VirtualMachine();
+        vm.setStatus(VmStatus.On);
+
+        when(repository.findById(1L)).thenReturn(Optional.of(vm));
+        when(repository.save(vm)).thenReturn(vm);
+
+        VirtualMachine resultado = service.stop(1L);
+
+        assertEquals(VmStatus.Off, resultado.getStatus());
+    }
+
+    @Test
+    void deveLancarExcecaoAoLigarVmInexistente() {
+
+        when(repository.findById(1L)).thenReturn(Optional.empty());
+
+        assertThrows(EntityNotFoundException.class,
+                () -> service.start(1L));
+    }
+
+    @Test
+    void deveLancarExcecaoAoDesligarVmInexistente() {
+
+        when(repository.findById(1L)).thenReturn(Optional.empty());
+
+        assertThrows(EntityNotFoundException.class,
+                () -> service.stop(1L));
+    }
+}

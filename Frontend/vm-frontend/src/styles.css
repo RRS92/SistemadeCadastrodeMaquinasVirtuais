@@ -1,1 +1,182 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== RESET BÁSICO ===== */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ===== HEADER ===== */
+.app-header {
+  background-color: #e60000;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== FOOTER (COLADO NO RODAPÉ) ===== */
+.app-footer {
+  background-color: #e60000;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== CONTAINER CENTRAL ===== */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #e60000;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== FORMULÁRIOS ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #e60000;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #e60000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #c40000;
+}
+
+.btn-secondary {
+  background-color: #666;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+}
+
+.btn-danger {
+  background-color: #b00000;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #900000;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ===== TABELA ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+.table tr:hover {
+  background-color: #fafafa;
+}
+
+/* ===== LINK DE AÇÃO ===== */
+.link-action {
+  margin-bottom: 16px;
+  display: inline-block;
+  color: #e60000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-action:hover {
+  text-decoration: underline;
+}
+
+/* ===== STATUS ===== */
+.status-on {
+  color: green;
+  font-weight: 600;
+}
+
+.status-off {
+  color: red;
+  font-weight: 600;
+}
+
+

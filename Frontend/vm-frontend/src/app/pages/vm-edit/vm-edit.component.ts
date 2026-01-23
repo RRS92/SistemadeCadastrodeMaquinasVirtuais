@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { VirtualMachineService } from '../../services/virtual-machine.service';
 import { VirtualMachine } from '../../models/virtual-machine.model';
 
 @Component({
   selector: 'app-vm-edit',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule
+  ],
   templateUrl: './vm-edit.component.html'
 })
 export class VmEditComponent implements OnInit {
@@ -41,9 +45,7 @@ export class VmEditComponent implements OnInit {
   }
 
   submit(): void {
-    if (this.vmForm.invalid) {
-      return;
-    }
+    if (this.vmForm.invalid) return;
 
     const vm: VirtualMachine = {
       name: this.vmForm.value.name!,

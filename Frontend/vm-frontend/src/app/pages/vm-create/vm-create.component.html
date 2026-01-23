@@ -1,21 +1,40 @@
-<h2>Cadastro de Máquina Virtual</h2>
+<div class="container">
+  <div class="card">
 
-<form [formGroup]="vmForm" (ngSubmit)="submit()">
+    <h2>Criar nova Máquina Virtual</h2>
 
-  <label>Nome</label>
-  <input formControlName="name">
-  <div *ngIf="vmForm.get('name')?.invalid && vmForm.get('name')?.touched">
-    Nome obrigatório
+    <form [formGroup]="vmForm" (ngSubmit)="submit()">
+
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" formControlName="name">
+      </div>
+
+      <div class="form-group">
+        <label>CPU</label>
+        <input type="number" formControlName="cpu">
+      </div>
+
+      <div class="form-group">
+        <label>Memória (MB)</label>
+        <input type="number" formControlName="memoryMb">
+      </div>
+
+      <div class="form-group">
+        <label>Disco (GB)</label>
+        <input type="number" formControlName="diskGb">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-primary" type="submit">
+          Salvar
+        </button>
+        <button class="btn btn-secondary" routerLink="/vms" type="button">
+          Cancelar
+        </button>
+      </div>
+
+    </form>
+
   </div>
-
-  <label>CPU</label>
-  <input type="number" formControlName="cpu">
-
-  <label>Memória</label>
-  <input type="number" formControlName="memoryMb">
-
-  <label>Disco</label>
-  <input type="number" formControlName="diskGb">
-
-  <button type="submit" [disabled]="vmForm.invalid">Salvar</button>
-</form>
+</div>

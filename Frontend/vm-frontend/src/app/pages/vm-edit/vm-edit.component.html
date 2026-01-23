@@ -1,20 +1,40 @@
-<h2>Editar Máquina Virtual</h2>
+<div class="container">
+  <div class="card">
 
-<form [formGroup]="vmForm" (ngSubmit)="submit()">
+    <h2>Editar Máquina Virtual</h2>
 
-  <label>Nome</label>
-  <input type="text" formControlName="name">
+    <form [formGroup]="vmForm" (ngSubmit)="submit()">
 
-  <label>CPU</label>
-  <input type="number" formControlName="cpu">
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" formControlName="name">
+      </div>
 
-  <label>Memória (MB)</label>
-  <input type="number" formControlName="memoryMb">
+      <div class="form-group">
+        <label>CPU</label>
+        <input type="number" formControlName="cpu">
+      </div>
 
-  <label>Disco (GB)</label>
-  <input type="number" formControlName="diskGb">
+      <div class="form-group">
+        <label>Memória (MB)</label>
+        <input type="number" formControlName="memoryMb">
+      </div>
 
-  <button type="submit" [disabled]="vmForm.invalid">
-    Salvar
-  </button>
-</form>
+      <div class="form-group">
+        <label>Disco (GB)</label>
+        <input type="number" formControlName="diskGb">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-primary" type="submit">
+          Salvar
+        </button>
+        <button class="btn btn-secondary" routerLink="/vms" type="button">
+          Cancelar
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+package com.desafio.claro.rebson.controller;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+class VirtualMachineControllerTest {
+
+    private MockMvc mockMvc;
+
+    @Autowired
+    private ApplicationContext context;
+
+    @Test
+    void deveCriarMaquinaVirtual() throws Exception {
+
+        mockMvc = MockMvcBuilders
+                .webAppContextSetup(context)
+                .build();
+
+        String json = """
+                {
+                  "name": "VM Controller Test",
+                  "cpu": 4,
+                  "memoryMb": 4096,
+                  "diskGb": 100
+                }
+                """;
+
+        mockMvc.perform(post("/vms")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json))
+                .andExpect(status().isOk());
+    }
+}

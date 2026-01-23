@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { VirtualMachineService } from '../../services/virtual-machine.service';
-import { Router } from '@angular/router';
-import { VirtualMachine } from '../../models/virtual-machine.model';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
+import { VirtualMachineService } from '../../services/virtual-machine.service';
+import { VirtualMachine } from '../../models/virtual-machine.model';
 
 @Component({
   selector: 'app-vm-create',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule
+  ],
   templateUrl: './vm-create.component.html'
 })
 export class VmCreateComponent {
@@ -27,9 +31,7 @@ export class VmCreateComponent {
   ) {}
 
   submit(): void {
-    if (this.vmForm.invalid) {
-      return;
-    }
+    if (this.vmForm.invalid) return;
 
     const vm: VirtualMachine = {
       name: this.vmForm.value.name!,

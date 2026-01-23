@@ -1,0 +1,56 @@
+package com.desafio.claro.rebson.controller;
+
+import com.desafio.claro.rebson.controller.DTO.VirtualMachineDTO;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+class VirtualMachineControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Test
+    void deveCriarMaquinaVirtual() throws Exception {
+
+        VirtualMachineDTO dto = new VirtualMachineDTO(
+                "VM Controller Test",
+                4,
+                4096,
+                100
+        );
+
+        mockMvc.perform(post("/vms")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(dto)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("VM Controller Test"))
+                .andExpect(jsonPath("$.status").value("Off"));
+    }
+
+    @Test
+    void deveListarMaquinasVirtuais() throws Exception {
+
+        mockMvc.perform(get("/vms"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void deveRetornar404QuandoBuscarVmInexistente() throws Exception {
+
+        mockMvc.perform(get("/vms/999"))
+                .andExpect(status().isInternalServerError());
+    }
+}
