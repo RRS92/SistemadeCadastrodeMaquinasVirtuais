@@ -37,6 +37,7 @@ Toda a aplicação foi construída seguindo boas práticas de desenvolvimento, s
 - Lombok
 - Maven
 - Swagger / OpenAPI (springdoc-openapi)
+- JUnit
 
 ## Modelagem Principal
 
@@ -67,7 +68,7 @@ Toda a aplicação foi construída seguindo boas práticas de desenvolvimento, s
 - POST /vms/{id}/start – Liga a VM
 - POST /vms/{id}/stop – Desliga a VM
 
-Todos os endpoints foram testados via **Insomnia** e estão documentados via **Swagger** UI.
+Todos os endpoints foram testados via **Insomnia** e estão documentados via **Swagger** UI. Também foram feitos testes de **Integração** e **Unitários** tanto no Service quanto no Controller da API REST utilizando a ferramenta JUnit.
 
 ---
 
