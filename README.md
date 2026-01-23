@@ -145,8 +145,11 @@ O frontend consome diretamente os endpoints do backend e reflete o estado real d
 <img width="1918" height="907" alt="03" src="https://github.com/user-attachments/assets/3fc1dab9-fa67-4ef6-a879-f3d8452bd6bd" />
 **Tela de edição:**
 <img width="1916" height="907" alt="04" src="https://github.com/user-attachments/assets/57c69891-4f64-4b90-b97d-e904ad15dd89" />
-**Tela de listagem com os status das máquinas alterados e máquinas excluidas:**
+**Tela de listagem com os status das máquinas alterados:**
 <img width="1918" height="906" alt="05" src="https://github.com/user-attachments/assets/69cbc9e5-3e9b-4918-a43f-273803826b7f" />
+**Tela de listagem com todas as máquinas excluidas:**
+<img width="1919" height="910" alt="07" src="https://github.com/user-attachments/assets/c8165350-bb84-4539-b45c-d694a83d8146" />
+
 
 ## Como Rodar o Frontend
 
